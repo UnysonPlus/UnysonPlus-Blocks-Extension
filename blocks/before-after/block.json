@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/before-after",
+	"title": "Before / After",
+	"category": "unysonplus",
+	"icon": "image-flip-horizontal",
+	"description": "An interactive before/after image comparison slider — drag, hover or click to reveal.",
+	"keywords": [ "compare", "comparison", "slider", "reveal", "image" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-before-after"
+}
