@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/text-expander",
+	"title": "Text Expander",
+	"category": "unysonplus",
+	"icon": "editor-expand",
+	"description": "Show a short excerpt with a Read more toggle that reveals the rest — for long copy, FAQs and disclosures.",
+	"keywords": [ "read more", "expand", "collapse", "toggle", "excerpt", "accordion" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-text-expander"
+}

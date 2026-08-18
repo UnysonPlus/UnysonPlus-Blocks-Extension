@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/video-popup",
+	"title": "Video Popup",
+	"category": "unysonplus",
+	"icon": "video-alt3",
+	"description": "A poster image with a play button that opens the video in a lightbox — YouTube, Vimeo or a self-hosted file.",
+	"keywords": [ "video", "lightbox", "popup", "youtube", "vimeo", "play" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-video-popup"
+}

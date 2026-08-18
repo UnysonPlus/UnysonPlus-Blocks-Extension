@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/badge",
+	"title": "Badge",
+	"category": "unysonplus",
+	"icon": "tag",
+	"description": "A small pill of text \u2014 a label, announcement or status marker, optionally linked.",
+	"keywords": [
+		"pill",
+		"label",
+		"tag",
+		"announcement",
+		"status",
+		"chip"
+	],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"html": false
+	},
+	"editorScript": "fw-block-badge"
+}

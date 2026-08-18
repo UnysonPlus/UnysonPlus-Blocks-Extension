@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/counter",
+	"title": "Counter",
+	"category": "unysonplus",
+	"icon": "chart-bar",
+	"description": "An animated number that counts up when it scrolls into view — for stats, milestones and results.",
+	"keywords": [ "number", "stat", "statistic", "count", "odometer", "milestone" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-counter"
+}

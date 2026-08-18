@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/special-heading",
+	"title": "Special Heading",
+	"category": "unysonplus",
+	"icon": "heading",
+	"description": "A section heading with an overline, title and subtitle — the standard way to open a section.",
+	"keywords": [ "heading", "title", "subtitle", "section", "eyebrow", "overline" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-special-heading"
+}

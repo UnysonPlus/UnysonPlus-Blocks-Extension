@@ -56,6 +56,69 @@ class FW_Extension_Gutenberg extends FW_Extension {
 		}
 
 		$this->blocks = array(
+			'blockquote' => array(
+				'shortcode' => 'blockquote',
+				'options'   => $this->blockquote_options(),
+				'styles'    => array(
+					'fw-shortcode-blockquote' => '/shortcodes/blockquote/static/css/styles.css',
+				),
+			),
+			'badge' => array(
+				'shortcode' => 'badge',
+				'options'   => $this->badge_options(),
+				'styles'    => array(
+					'fw-shortcode-badge' => '/shortcodes/badge/static/css/styles.css',
+				),
+			),
+			'tag-list' => array(
+				'shortcode' => 'tag_list',
+				'options'   => $this->tag_list_options(),
+				'styles'    => array(
+					'fw-shortcode-tag-list' => '/shortcodes/tag-list/static/css/styles.css',
+				),
+			),
+			'text-expander' => array(
+				'shortcode' => 'text_expander',
+				'options'   => $this->text_expander_options(),
+				'styles'    => array(
+					'fw-shortcode-text-expander' => '/shortcodes/text-expander/static/css/styles.css',
+				),
+			),
+			'special-heading' => array(
+				'shortcode' => 'special_heading',
+				'options'   => $this->special_heading_options(),
+				'styles'    => array(
+					'fw-shortcode-special-heading' => '/shortcodes/special-heading/static/css/styles.css',
+				),
+			),
+			'icon-box' => array(
+				'shortcode' => 'icon_box',
+				'options'   => $this->icon_box_options(),
+				'styles'    => array(
+					'fw-shortcode-icon-box' => '/shortcodes/icon-box/static/css/styles.css',
+				),
+			),
+			'video-popup' => array(
+				'shortcode' => 'video_popup',
+				'options'   => $this->video_popup_options(),
+				'styles'    => array(
+					'fw-shortcode-video-popup' => '/shortcodes/video-popup/static/css/styles.css',
+				),
+			),
+			'star-rating' => array(
+				'shortcode' => 'star_rating',
+				'options'   => $this->star_rating_options(),
+				'styles'    => array(
+					'fw-shortcode-star-rating' => '/shortcodes/star-rating/static/css/styles.css',
+				),
+			),
+			'counter' => array(
+				'shortcode' => 'counter',
+				'options'   => $this->counter_options(),
+				'styles'    => array(
+					'fw-shortcode-counter' => '/shortcodes/counter/static/css/styles.css',
+				),
+			),
 			'before-after' => array(
 				'shortcode' => 'before_after',
 				'options'   => $this->before_after_options(),
@@ -75,6 +138,325 @@ class FW_Extension_Gutenberg extends FW_Extension {
 		$this->blocks = apply_filters( 'fw_ext_gutenberg_blocks', $this->blocks );
 
 		return $this->blocks;
+	}
+
+	/**
+	 * The option paths the Blockquote block exposes in its inspector.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function blockquote_options() {
+		return $this->pick_shortcode_options( 'blockquote', array(
+			'quote', 'author', 'role', 'source_url',
+			'design', 'align', 'show_mark', 'box_style', 'max_width',
+			'quote_color', 'author_color', 'accent_color', 'bg_color',
+		) );
+	}
+
+	/**
+	 * The option paths the Badge block exposes in its inspector.
+	 *
+	 * The element carries 29 content-tab options; this exposes the dozen that
+	 * decide what the badge IS. Three groups are deliberately left in the page
+	 * builder:
+	 *
+	 * - the `rel_*` switches and `link_target`, which are SEO/link plumbing rather
+	 *   than design, and are easy to set wrongly without seeing the whole page;
+	 * - the `schema_*` fields, which emit structured data — the same reasoning as
+	 *   Star Rating's review schema: worth a deliberate decision, not a sidebar toggle;
+	 * - `dismissible` / `dismiss_id`, because a dismissal that persists per visitor
+	 *   needs an id chosen with care, and a half-set pair silently does nothing.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function badge_options() {
+		return $this->pick_shortcode_options( 'badge', array(
+			'tag_text', 'message', 'link',
+			'leading', 'leading_icon', 'trailing_icon',
+			'style', 'shape', 'size', 'align', 'tag_style', 'hover',
+			'pill_color', 'text_color', 'tag_color',
+			'aria_label',
+		) );
+	}
+
+	/**
+	 * The option paths the Tag List block exposes in its inspector.
+	 *
+	 * Every content-tab option is exposed — the element is small enough that
+	 * curating it would only hide things for no gain.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function tag_list_options() {
+		return $this->pick_shortcode_options( 'tag_list', array(
+			'items', 'design', 'shape', 'size', 'align', 'gap', 'marker', 'hover', 'tag_color',
+		) );
+	}
+
+	/**
+	 * The option paths the Text Expander block exposes in its inspector.
+	 *
+	 * `native_details` is deliberately omitted. It swaps the whole element to a
+	 * native <details> / <summary> pair, which changes the markup, the styling
+	 * hooks and the keyboard behaviour all at once — a structural choice worth
+	 * making in the page builder where the result is visible next to everything
+	 * else, not a switch to flip in a narrow sidebar.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function text_expander_options() {
+		return $this->pick_shortcode_options( 'text_expander', array(
+			'visible_content', 'hidden_content',
+			'btn_show', 'btn_hide', 'toggle_icon',
+			'show_btn_position', 'hide_btn_position',
+			'count_mode', 'show_ellipsis', 'merge_boundary',
+			'click_anywhere', 'initially_open',
+			'visible_color', 'hidden_color', 'btn_color',
+		) );
+	}
+
+	/**
+	 * The option paths the Special Heading block exposes in its inspector.
+	 *
+	 * The element carries 28 content-tab options — far more than a sidebar column
+	 * should show. What is exposed here is the heading itself (overline, title,
+	 * subtitle), the few structural choices that change its shape, and the colours.
+	 *
+	 * The per-part alignment pickers (`overline_align`, `title_align`,
+	 * `subtitle_align`) are deliberately left out: `alignment` already sets all
+	 * three, and offering four alignment controls in a narrow column invites the
+	 * confusion of setting one and wondering why another disagrees. The per-part
+	 * overrides remain in the page builder for the layouts that need them.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function special_heading_options() {
+		return $this->pick_shortcode_options( 'special_heading', array(
+			'overline', 'title', 'subtitle', 'heading',
+			'alignment', 'display_size', 'subtitle_size', 'element_spacing',
+			'overline_uppercase', 'overline_marker',
+			'icon', 'overline_icon',
+			'bg_color', 'overline_color', 'title_color', 'subtitle_color',
+			'block_max_width',
+		) );
+	}
+
+	/**
+	 * The option paths the Icon Box block exposes in its inspector.
+	 *
+	 * The most-used marketing pattern in the set, and the first block whose content
+	 * includes rich text — `content` is a `wp-editor`, which edits its markup
+	 * directly rather than as a WYSIWYG (see that option type's docs for why).
+	 *
+	 * `custom_icon` is deliberately omitted: it is a `hidden` field the icon picker
+	 * maintains as a side effect, not something a user sets.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function icon_box_options() {
+		return $this->pick_shortcode_options( 'icon_box', array(
+			'icon', 'title', 'title_tag', 'content',
+			'style', 'icon_align', 'icon_size',
+			'box_style', 'bg_color', 'icon_color', 'title_color', 'content_color',
+			'box_link', 'link_target',
+		) );
+	}
+
+	/**
+	 * The option paths the Video Popup block exposes in its inspector.
+	 *
+	 * `poster` and `video_url` come first because they are the two the element
+	 * cannot render without — the shortcode itself says as much when both are
+	 * empty, and that message is what the block preview shows until they are set.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function video_popup_options() {
+		return $this->pick_shortcode_options( 'video_popup', array(
+			'poster', 'video_url', 'play_label', 'caption',
+			'design', 'ratio', 'play_size', 'rounded',
+			'overlay', 'hover_zoom',
+			'accent_color', 'icon_color', 'overlay_color', 'label_color',
+		) );
+	}
+
+	/**
+	 * The option paths the Star Rating block exposes in its inspector.
+	 *
+	 * This element is a good fit for a block sidebar because every option in its
+	 * content tabs already has a React control — including the three colour fields,
+	 * which use the shared compact predefined-colours picker.
+	 *
+	 * Schema entries are read from the shortcode itself rather than restated here,
+	 * so the choices (designs, sizes, presets) cannot drift from the ones the page
+	 * builder shows. Only the SELECTION of which options to expose lives in this file.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function star_rating_options() {
+		$expose = array(
+			'rating', 'max', 'label', 'show_value', 'count_text',
+			'design', 'size', 'align',
+			'fill_color', 'empty_color', 'text_color',
+		);
+
+		return $this->pick_shortcode_options( 'star_rating', $expose );
+	}
+
+	/**
+	 * Pull a curated set of leaf options out of a shortcode's own schema.
+	 *
+	 * Blocks expose a flat subset, and restating each entry by hand — as the
+	 * Before/After and Counter maps do — means every choice list is duplicated and
+	 * free to drift from the page builder's. Reading them from the shortcode keeps
+	 * one source of truth: add a design to the shortcode and the block offers it.
+	 *
+	 * Leaves are matched by id anywhere in the schema, because `group` / `tab`
+	 * containers do not namespace their children — the id IS the fw_akg path.
+	 * Requested ids that no longer exist are skipped rather than emitted as broken
+	 * entries, so renaming an option degrades to "missing from the sidebar" instead
+	 * of a control rendering against nothing.
+	 *
+	 * @param string $tag    Shortcode tag.
+	 * @param array  $expose Option ids to expose, in the order they should appear.
+	 * @return array Map of option id => schema entry.
+	 */
+	private function pick_shortcode_options( $tag, array $expose ) {
+		$shortcodes = fw_ext( 'shortcodes' );
+
+		if ( ! $shortcodes ) {
+			return array();
+		}
+
+		$shortcode = $shortcodes->get_shortcode( $tag );
+
+		if ( ! $shortcode ) {
+			return array();
+		}
+
+		$found = array();
+
+		$walk = function ( $options ) use ( &$walk, &$found ) {
+			foreach ( (array) $options as $id => $option ) {
+				if ( ! is_array( $option ) ) {
+					continue;
+				}
+
+				if ( isset( $option['options'] ) && is_array( $option['options'] ) ) {
+					$walk( $option['options'] );
+					continue;
+				}
+
+				if ( ! empty( $option['type'] ) && ! isset( $found[ $id ] ) ) {
+					$found[ $id ] = $option;
+				}
+			}
+		};
+
+		$walk( $shortcode->get_options() );
+
+		$out = array();
+
+		foreach ( $expose as $id ) {
+			if ( isset( $found[ $id ] ) ) {
+				$out[ $id ] = $found[ $id ];
+			}
+		}
+
+		return $out;
+	}
+
+	/**
+	 * The option paths the Counter block exposes in its inspector.
+	 *
+	 * A curated FLAT map of `fw_akg` path => option schema entry, not the whole
+	 * shortcode `options.php`. Two reasons that matters:
+	 *
+	 * - The shortcode's own options are nested in `tab` / `group` containers,
+	 *   which are structural and have no React renderer. Picking leaves avoids
+	 *   the question entirely. (Groups do not namespace values, so a leaf's path
+	 *   is simply its id.)
+	 * - A block inspector is a narrow column. Exposing all ~25 counter options
+	 *   would be worse than exposing the dozen that decide what the element is.
+	 *
+	 * Anything omitted still round-trips untouched inside `upOptions`, because the
+	 * block never rewrites the attribute wholesale — so a counter styled in the
+	 * page builder and then opened as a block keeps every value this does not show.
+	 *
+	 * @return array Map of fw_akg path => option schema entry.
+	 */
+	private function counter_options() {
+		return array(
+			'number' => array(
+				'type'  => 'text',
+				'label' => __( 'Number', 'fw' ),
+				'value' => '100',
+				'desc'  => __( 'The value to count up to — e.g. 45280, 96, 4.2.', 'fw' ),
+			),
+			'start' => array(
+				'type'  => 'text',
+				'label' => __( 'Start From', 'fw' ),
+				'value' => '0',
+			),
+			'prefix' => array(
+				'type'  => 'text',
+				'label' => __( 'Prefix', 'fw' ),
+				'value' => '',
+				'desc'  => __( 'Shown before the number, e.g. $.', 'fw' ),
+			),
+			'suffix' => array(
+				'type'  => 'text',
+				'label' => __( 'Suffix', 'fw' ),
+				'value' => '',
+				'desc'  => __( 'Shown after the number, e.g. + or %.', 'fw' ),
+			),
+			'decimals' => array(
+				'type'    => 'select',
+				'label'   => __( 'Decimal Places', 'fw' ),
+				'value'   => '0',
+				'choices' => array( '0' => '0', '1' => '1', '2' => '2', '3' => '3' ),
+			),
+			'separator' => array(
+				'type'    => 'select',
+				'label'   => __( 'Thousands Separator', 'fw' ),
+				'value'   => 'yes',
+				'choices' => array( 'yes' => __( 'Yes', 'fw' ), 'no' => __( 'No', 'fw' ) ),
+			),
+			'duration' => array(
+				'type'  => 'text',
+				'label' => __( 'Duration (ms)', 'fw' ),
+				'value' => '2000',
+			),
+			'easing' => array(
+				'type'    => 'select',
+				'label'   => __( 'Easing', 'fw' ),
+				'value'   => 'ease-out',
+				'choices' => array(
+					'ease-out' => __( 'Ease Out (fast to slow)', 'fw' ),
+					'linear'   => __( 'Linear', 'fw' ),
+				),
+			),
+			'alignment' => array(
+				'type'    => 'select',
+				'label'   => __( 'Alignment', 'fw' ),
+				'value'   => '',
+				'choices' => array(
+					''       => __( 'Inherit', 'fw' ),
+					'left'   => __( 'Left', 'fw' ),
+					'center' => __( 'Center', 'fw' ),
+					'right'  => __( 'Right', 'fw' ),
+				),
+			),
+			// Exercises the typography + compact-colour controls, which is most of
+			// what makes a counter look like the surrounding design.
+			'number_font'  => array(
+				'type'  => 'typography',
+				'label' => __( 'Number Font', 'fw' ),
+			),
+			'number_color' => function_exists( 'sc_color_field_compact' )
+				? sc_color_field_compact( array( 'label' => __( 'Number Color', 'fw' ), 'kind' => 'text' ) )
+				: array( 'type' => 'color-picker', 'label' => __( 'Number Color', 'fw' ), 'value' => '' ),
+		);
 	}
 
 	/**
@@ -276,12 +658,51 @@ class FW_Extension_Gutenberg extends FW_Extension {
 			}
 
 			foreach ( $definition['styles'] as $handle => $rel ) {
-				wp_enqueue_style(
-					$handle,
-					fw_min_uri( $shortcodes->get_declared_URI( $rel ) ),
-					array(),
-					$version
-				);
+				$src = fw_min_uri( $shortcodes->get_declared_URI( $rel ) );
+
+				/**
+				 * Enqueue under an ALIAS handle with no dependencies.
+				 *
+				 * The obvious call — wp_enqueue_style( $handle, $src, array() ) — does
+				 * not work here, twice over. wp_enqueue_style() ignores the src and
+				 * deps you pass when the handle is already registered, and it usually
+				 * is: the shortcode's static.php registered it, complete with its real
+				 * dependencies. And a style whose dependency is NOT registered is
+				 * silently DROPPED.
+				 *
+				 * Those dependencies are front-end handles (`font-awesome`,
+				 * `fw-ext-builder-frontend-grid`, …) registered during the framework's
+				 * front-end pass, which does not run for the block editor. So the
+				 * element's own CSS vanished from the canvas — Icon Box and Special
+				 * Heading each hit this with a DIFFERENT missing dependency, which is
+				 * why special-casing one of them was not a fix.
+				 *
+				 * An alias carries no deps and therefore cannot be dropped. The real
+				 * dependencies are still enqueued below when they happen to be
+				 * registered, so utilities and icon fonts come along where available.
+				 */
+				wp_enqueue_style( $handle . '-fw-block', $src, array(), $version );
+
+				$deps = isset( $GLOBALS['wp_styles']->registered[ $handle ] )
+					? (array) $GLOBALS['wp_styles']->registered[ $handle ]->deps
+					: array();
+
+				foreach ( $deps as $dep ) {
+					// font-awesome is framework-owned and cheap to register on demand;
+					// other deps are enqueued only if something already registered them.
+					if ( 'font-awesome' === $dep && ! wp_style_is( $dep, 'registered' ) ) {
+						wp_register_style(
+							'font-awesome',
+							fw_get_framework_directory_uri( '/static/libs/font-awesome/css/font-awesome.min.css' ),
+							array(),
+							fw()->manifest->get_version()
+						);
+					}
+
+					if ( wp_style_is( $dep, 'registered' ) ) {
+						wp_enqueue_style( $dep );
+					}
+				}
 			}
 		}
 	}
@@ -360,6 +781,34 @@ class FW_Extension_Gutenberg extends FW_Extension {
 			$atts = isset( $attributes['upOptions'] ) && is_array( $attributes['upOptions'] )
 				? $attributes['upOptions']
 				: array();
+
+			/**
+			 * Fill in the shortcode's declared defaults underneath the block's own
+			 * values.
+			 *
+			 * A block stores ONLY what the user changed — a freshly inserted block
+			 * has `upOptions = {}`. The page builder, by contrast, saves a complete
+			 * value set, so the shortcode's view has always been handed every att
+			 * it declares. Passing the block's sparse array straight through meant
+			 * every untouched option arrived empty: a new Counter rendered a target
+			 * of 0 instead of its declared 100, and read as broken on insert.
+			 *
+			 * fw_get_options_values_from_input() with no input returns exactly the
+			 * declared defaults, flattened the same way the builder stores them
+			 * (group / tab containers do not namespace their children), so the two
+			 * paths now hand the view the same shape.
+			 *
+			 * Block values win: this only supplies what the user has not set.
+			 */
+			$options = $shortcode->get_options();
+
+			if ( ! empty( $options ) ) {
+				$defaults = fw_get_options_values_from_input( $options, array() );
+
+				if ( is_array( $defaults ) ) {
+					$atts = array_merge( $defaults, $atts );
+				}
+			}
 
 			return $shortcode->render( $atts, '' );
 		};

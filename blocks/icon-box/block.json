@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/icon-box",
+	"title": "Icon Box",
+	"category": "unysonplus",
+	"icon": "info-outline",
+	"description": "An icon above a heading and text — the standard feature, service and benefit card.",
+	"keywords": [ "icon", "feature", "service", "benefit", "card" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-icon-box"
+}

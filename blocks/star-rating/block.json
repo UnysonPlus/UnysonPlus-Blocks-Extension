@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/star-rating",
+	"title": "Star Rating",
+	"category": "unysonplus",
+	"icon": "star-filled",
+	"description": "A star rating with optional score, label and review count — for reviews, testimonials and comparison tables.",
+	"keywords": [ "rating", "stars", "review", "score", "testimonial" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-star-rating"
+}

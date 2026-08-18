@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/blockquote",
+	"title": "Blockquote",
+	"category": "unysonplus",
+	"icon": "format-quote",
+	"description": "A pull quote with an author, role and source link \u2014 for testimonials, press quotes and callouts.",
+	"keywords": [
+		"quote",
+		"pullquote",
+		"testimonial",
+		"citation",
+		"press"
+	],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"html": false
+	},
+	"editorScript": "fw-block-blockquote"
+}
