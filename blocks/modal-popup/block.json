@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/modal-popup",
+	"title": "Modal Popup",
+	"category": "unysonplus",
+	"icon": "external",
+	"description": "A button, link, icon or image that opens content in a modal dialog.",
+	"keywords": [ "modal", "popup", "lightbox", "dialog", "overlay" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-modal-popup"
+}

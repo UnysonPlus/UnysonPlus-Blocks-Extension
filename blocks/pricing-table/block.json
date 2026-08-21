@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/pricing-table",
+	"title": "Pricing Table",
+	"category": "unysonplus",
+	"icon": "cart",
+	"description": "Pricing plans side by side, with a monthly / yearly toggle and a featured column.",
+	"keywords": [ "pricing", "plans", "tiers", "subscription", "packages", "compare" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-pricing-table"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/media-video",
+	"title": "Video",
+	"category": "unysonplus",
+	"icon": "format-video",
+	"description": "A video - self-hosted or embedded - at a fixed ratio.",
+	"keywords": [ "video", "embed", "youtube", "vimeo", "mp4", "player" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-media-video"
+}

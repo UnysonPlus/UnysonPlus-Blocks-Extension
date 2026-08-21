@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-product-filters",
+	"title": "Product Filters",
+	"category": "unysonplus",
+	"icon": "filter",
+	"description": "Filter controls for a product grid — price, attributes, categories.",
+	"keywords": [ "filters", "facets", "shop", "woocommerce", "refine" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-product-filters"
+}

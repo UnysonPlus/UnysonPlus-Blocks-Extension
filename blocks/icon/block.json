@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/icon",
+	"title": "Icon",
+	"category": "unysonplus",
+	"icon": "star-filled",
+	"description": "A single icon with an optional title and badge.",
+	"keywords": [ "icon", "symbol", "glyph", "badge", "svg" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-icon"
+}

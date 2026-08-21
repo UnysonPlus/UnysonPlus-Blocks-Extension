@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-cart-link",
+	"title": "Cart Link",
+	"category": "unysonplus",
+	"icon": "cart",
+	"description": "A link to the cart, with an item count and total.",
+	"keywords": [ "cart", "basket", "link", "header", "woocommerce" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-cart-link"
+}

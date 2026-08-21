@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/timeline",
+	"title": "Timeline",
+	"category": "unysonplus",
+	"icon": "backup",
+	"description": "A vertical timeline of dated entries with markers and cards.",
+	"keywords": [ "timeline", "history", "milestones", "roadmap", "chronology" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-timeline"
+}

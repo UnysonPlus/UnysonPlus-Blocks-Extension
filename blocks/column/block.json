@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/column",
+	"title": "Column",
+	"category": "unysonplus",
+	"icon": "columns",
+	"description": "A column inside a row, with a responsive width and its own alignment.",
+	"keywords": [ "column", "col", "layout", "grid", "responsive" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-column"
+}

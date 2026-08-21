@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/image-content",
+	"title": "Image + Content",
+	"category": "unysonplus",
+	"icon": "align-pull-left",
+	"description": "An image beside rich text, with a split ratio and full control over how it stacks.",
+	"keywords": [ "image", "text", "media", "split", "side by side", "feature row" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-image-content"
+}

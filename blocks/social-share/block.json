@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/social-share",
+	"title": "Social Share",
+	"category": "unysonplus",
+	"icon": "share",
+	"description": "Share buttons for the current page - pick the networks, shape and layout.",
+	"keywords": [ "share", "social", "facebook", "twitter", "linkedin", "sharing" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-social-share"
+}

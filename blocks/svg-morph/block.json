@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/svg-morph",
+	"title": "SVG Morph",
+	"category": "unysonplus",
+	"icon": "art",
+	"description": "One SVG shape morphing into the next, on scroll, hover or a loop.",
+	"keywords": [ "svg", "morph", "shape", "transform", "blob", "transition" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-svg-morph"
+}

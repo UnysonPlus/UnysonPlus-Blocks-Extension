@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/code-block",
+	"title": "Code Block",
+	"category": "unysonplus",
+	"icon": "editor-code",
+	"description": "A formatted code sample, or raw HTML rendered into the page.",
+	"keywords": [ "code", "html", "snippet", "sample", "pre", "syntax" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-code-block"
+}

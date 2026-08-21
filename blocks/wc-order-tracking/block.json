@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-order-tracking",
+	"title": "Order Tracking",
+	"category": "unysonplus",
+	"icon": "search",
+	"description": "A form for customers to look up an order.",
+	"keywords": [ "order tracking", "track order", "woocommerce", "order status" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-order-tracking"
+}

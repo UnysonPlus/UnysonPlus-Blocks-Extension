@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/gallery",
+	"title": "Gallery",
+	"category": "unysonplus",
+	"icon": "format-gallery",
+	"description": "An image gallery with captions, a lightbox and several layouts.",
+	"keywords": [ "gallery", "images", "photos", "grid", "masonry", "lightbox" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-gallery"
+}

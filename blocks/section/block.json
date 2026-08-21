@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/section",
+	"title": "Section",
+	"category": "unysonplus",
+	"icon": "layout",
+	"description": "A full-width band that holds other blocks, with backgrounds, dividers and effects.",
+	"keywords": [ "section", "band", "row", "container", "layout", "hero" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-section"
+}

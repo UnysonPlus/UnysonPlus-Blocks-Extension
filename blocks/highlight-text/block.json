@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/highlight-text",
+	"title": "Highlight Text",
+	"category": "unysonplus",
+	"icon": "editor-underline",
+	"description": "A run of text with an animated highlight - marker, underline, circle and more.",
+	"keywords": [ "highlight", "marker", "underline", "emphasis", "circle", "accent" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-highlight-text"
+}

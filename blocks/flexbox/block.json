@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/flexbox",
+	"title": "Flexbox",
+	"category": "unysonplus",
+	"icon": "editor-insertmore",
+	"description": "A flex container that arranges its blocks along an axis.",
+	"keywords": [ "flex", "flexbox", "row", "layout", "align", "justify" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-flexbox"
+}

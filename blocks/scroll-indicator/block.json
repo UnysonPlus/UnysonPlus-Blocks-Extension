@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/scroll-indicator",
+	"title": "Scroll Indicator",
+	"category": "unysonplus",
+	"icon": "arrow-down-alt2",
+	"description": "A scroll-down cue - text and an icon that links further down the page.",
+	"keywords": [ "scroll", "down", "cue", "hero", "chevron", "indicator" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-scroll-indicator"
+}

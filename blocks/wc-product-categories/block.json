@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-product-categories",
+	"title": "Product Categories",
+	"category": "unysonplus",
+	"icon": "category",
+	"description": "A grid of product categories.",
+	"keywords": [ "categories", "product categories", "woocommerce", "shop", "browse" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-product-categories"
+}

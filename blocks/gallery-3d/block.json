@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/gallery-3d",
+	"title": "3D Gallery",
+	"category": "unysonplus",
+	"icon": "format-gallery",
+	"description": "Images arranged in a WebGL 3D scene - a ring, a wall, a sphere.",
+	"keywords": [ "3d gallery", "webgl", "carousel", "ring", "sphere", "immersive" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-gallery-3d"
+}

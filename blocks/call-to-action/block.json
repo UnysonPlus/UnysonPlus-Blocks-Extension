@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/call-to-action",
+	"title": "Call to Action",
+	"category": "unysonplus",
+	"icon": "megaphone",
+	"description": "A heading, a message and a button - the standard conversion band.",
+	"keywords": [ "cta", "call to action", "banner", "conversion", "signup" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-call-to-action"
+}

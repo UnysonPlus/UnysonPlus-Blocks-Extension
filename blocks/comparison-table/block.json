@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/comparison-table",
+	"title": "Comparison Table",
+	"category": "unysonplus",
+	"icon": "editor-table",
+	"description": "A feature-comparison table with a highlighted column and sticky header.",
+	"keywords": [ "comparison", "table", "pricing", "features", "versus", "plans" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-comparison-table"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/posts",
+	"title": "Posts",
+	"category": "unysonplus",
+	"icon": "admin-post",
+	"description": "A query-driven grid or list of posts, with filters, pagination and card layouts.",
+	"keywords": [ "posts", "blog", "grid", "loop", "query", "archive", "articles" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-posts"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-products",
+	"title": "Products",
+	"category": "unysonplus",
+	"icon": "cart",
+	"description": "A grid or carousel of products, from a query you build.",
+	"keywords": [ "products", "shop", "woocommerce", "grid", "catalogue", "store" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-products"
+}

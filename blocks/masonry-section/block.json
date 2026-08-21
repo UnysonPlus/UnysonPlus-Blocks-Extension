@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/masonry-section",
+	"title": "Masonry Section",
+	"category": "unysonplus",
+	"icon": "schedule",
+	"description": "A section whose blocks flow into a staggered masonry layout.",
+	"keywords": [ "masonry", "staggered", "grid", "pinterest", "section" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-masonry-section"
+}

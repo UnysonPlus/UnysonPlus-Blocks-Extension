@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/project-nav",
+	"title": "Project Navigation",
+	"category": "unysonplus",
+	"icon": "leftright",
+	"description": "Previous and next links between projects.",
+	"keywords": [ "project", "navigation", "previous", "next", "portfolio" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-project-nav"
+}

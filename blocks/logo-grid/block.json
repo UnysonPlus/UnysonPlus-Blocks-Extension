@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/logo-grid",
+	"title": "Logo Grid",
+	"category": "unysonplus",
+	"icon": "screenoptions",
+	"description": "A grid or scrolling row of client and partner logos.",
+	"keywords": [ "logos", "clients", "partners", "brands", "marquee", "as seen in" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-logo-grid"
+}

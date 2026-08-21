@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/social-icons",
+	"title": "Social Icons",
+	"category": "unysonplus",
+	"icon": "share-alt",
+	"description": "A row of social profile links, from the theme settings or a custom list.",
+	"keywords": [ "social", "icons", "profiles", "follow", "links" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-social-icons"
+}

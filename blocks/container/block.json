@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/container",
+	"title": "Container",
+	"category": "unysonplus",
+	"icon": "align-center",
+	"description": "A width-constrained wrapper around other blocks.",
+	"keywords": [ "container", "wrapper", "width", "layout" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-container"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/post-content",
+	"title": "Post Content",
+	"category": "unysonplus",
+	"icon": "editor-alignleft",
+	"description": "The current post's content, for use in a template.",
+	"keywords": [ "post content", "dynamic", "theme builder", "loop" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-post-content"
+}

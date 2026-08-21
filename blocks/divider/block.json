@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/divider",
+	"title": "Divider",
+	"category": "unysonplus",
+	"icon": "minus",
+	"description": "A separator - a line, an icon, text or a shape.",
+	"keywords": [ "divider", "separator", "line", "hr", "rule", "spacer" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-divider"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/image-hotspots",
+	"title": "Image Hotspots",
+	"category": "unysonplus",
+	"icon": "location",
+	"description": "An image with pins that reveal text on hover or click.",
+	"keywords": [ "hotspots", "pins", "interactive image", "markers", "annotations" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-image-hotspots"
+}

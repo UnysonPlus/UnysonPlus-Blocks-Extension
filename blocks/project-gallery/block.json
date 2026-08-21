@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/project-gallery",
+	"title": "Project Gallery",
+	"category": "unysonplus",
+	"icon": "format-gallery",
+	"description": "A project's image gallery, with a lightbox and per-breakpoint columns.",
+	"keywords": [ "project", "gallery", "images", "portfolio", "lightbox" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-project-gallery"
+}

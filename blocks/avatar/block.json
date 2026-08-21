@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/avatar",
+	"title": "Avatar",
+	"category": "unysonplus",
+	"icon": "admin-users",
+	"description": "A user avatar - photo, initials or icon - with an optional status dot and label.",
+	"keywords": [ "avatar", "profile picture", "user", "initials", "gravatar" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-avatar"
+}

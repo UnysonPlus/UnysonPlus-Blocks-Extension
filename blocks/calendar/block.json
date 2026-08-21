@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/calendar",
+	"title": "Calendar",
+	"category": "unysonplus",
+	"icon": "calendar-alt",
+	"description": "A month calendar with events, and an optional upcoming list.",
+	"keywords": [ "calendar", "events", "dates", "schedule", "month", "agenda" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-calendar"
+}

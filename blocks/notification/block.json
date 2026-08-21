@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/notification",
+	"title": "Notification",
+	"category": "unysonplus",
+	"icon": "warning",
+	"description": "A dismissible notice - inline, an announcement bar or a floating toast.",
+	"keywords": [ "notice", "alert", "banner", "toast", "announcement", "message" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-notification"
+}

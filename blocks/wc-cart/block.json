@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-cart",
+	"title": "Cart",
+	"category": "unysonplus",
+	"icon": "cart",
+	"description": "WooCommerce's cart page.",
+	"keywords": [ "cart", "basket", "woocommerce", "cart page" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-cart"
+}

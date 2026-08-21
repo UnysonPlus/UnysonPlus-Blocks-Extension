@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/bleed-section",
+	"title": "Bleed Section",
+	"category": "unysonplus",
+	"icon": "align-pull-left",
+	"description": "A section with an image bleeding off one edge and content on the other.",
+	"keywords": [ "bleed", "split", "half image", "section", "hero" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-bleed-section"
+}

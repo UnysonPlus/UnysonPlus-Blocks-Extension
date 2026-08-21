@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/project-testimonial",
+	"title": "Project Testimonial",
+	"category": "unysonplus",
+	"icon": "format-quote",
+	"description": "The client quote attached to a project.",
+	"keywords": [ "project", "testimonial", "quote", "client", "portfolio" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-project-testimonial"
+}

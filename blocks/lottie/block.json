@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/lottie",
+	"title": "Lottie",
+	"category": "unysonplus",
+	"icon": "format-video",
+	"description": "A Lottie animation - JSON from a file or a URL - with playback triggers.",
+	"keywords": [ "lottie", "animation", "json", "motion", "icon animation", "bodymovin" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-lottie"
+}

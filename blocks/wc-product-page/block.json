@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-product-page",
+	"title": "Product Page",
+	"category": "unysonplus",
+	"icon": "cart",
+	"description": "A product's full page — gallery, summary, tabs and related products.",
+	"keywords": [ "product page", "woocommerce", "single", "gallery", "tabs" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-product-page"
+}

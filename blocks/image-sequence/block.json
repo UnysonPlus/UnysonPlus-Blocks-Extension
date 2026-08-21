@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/image-sequence",
+	"title": "Image Sequence",
+	"category": "unysonplus",
+	"icon": "images-alt2",
+	"description": "A frame-by-frame image sequence scrubbed by scroll - a product spin or an unfold.",
+	"keywords": [ "image sequence", "scroll", "frames", "scrub", "360", "product spin" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-image-sequence"
+}

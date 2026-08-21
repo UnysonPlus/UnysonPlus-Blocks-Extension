@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/global-section",
+	"title": "Global Section",
+	"category": "unysonplus",
+	"icon": "screenoptions",
+	"description": "Reusable content defined once and placed anywhere - edit it in one place.",
+	"keywords": [ "global", "reusable", "section", "shared", "sync", "include" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-global-section"
+}

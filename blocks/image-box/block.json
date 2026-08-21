@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/image-box",
+	"title": "Image Box",
+	"category": "unysonplus",
+	"icon": "format-image",
+	"description": "An image with a heading, text and a button - the standard card.",
+	"keywords": [ "image box", "card", "feature", "media", "thumbnail", "tile" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-image-box"
+}

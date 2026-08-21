@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/business-info",
+	"title": "Business Info",
+	"category": "unysonplus",
+	"icon": "store",
+	"description": "Opening hours, address and contact details, with a live open/closed status.",
+	"keywords": [ "hours", "opening times", "contact", "address", "local", "business" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-business-info"
+}

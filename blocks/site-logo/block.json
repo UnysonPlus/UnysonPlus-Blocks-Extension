@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/site-logo",
+	"title": "Site Logo",
+	"category": "unysonplus",
+	"icon": "format-image",
+	"description": "The site's logo, from Theme Settings or a custom image.",
+	"keywords": [ "logo", "brand", "header", "site identity" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-site-logo"
+}

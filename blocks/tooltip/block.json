@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/tooltip",
+	"title": "Tooltip",
+	"category": "unysonplus",
+	"icon": "editor-help",
+	"description": "Text or an icon that reveals a tooltip on hover, focus or click.",
+	"keywords": [ "tooltip", "hint", "popover", "hover", "help", "tip" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-tooltip"
+}

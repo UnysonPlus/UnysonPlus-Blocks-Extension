@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/team-member",
+	"title": "Team Member",
+	"category": "unysonplus",
+	"icon": "businessperson",
+	"description": "A person card - photo, name, role, description and links.",
+	"keywords": [ "team", "person", "staff", "profile", "bio", "about us" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-team-member"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/text-block",
+	"title": "Text Block",
+	"category": "unysonplus",
+	"icon": "editor-paragraph",
+	"description": "Rich text with typographic controls - columns, drop caps, lead and balance.",
+	"keywords": [ "text", "paragraph", "prose", "columns", "drop cap", "typography" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-text-block"
+}

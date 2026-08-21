@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-account",
+	"title": "Account Link",
+	"category": "unysonplus",
+	"icon": "admin-users",
+	"description": "A link to the account page, for the header.",
+	"keywords": [ "account", "login", "my account", "woocommerce", "header" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-account"
+}

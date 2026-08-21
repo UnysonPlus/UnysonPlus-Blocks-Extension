@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/post-excerpt",
+	"title": "Post Excerpt",
+	"category": "unysonplus",
+	"icon": "excerpt-view",
+	"description": "The current post's excerpt.",
+	"keywords": [ "excerpt", "summary", "dynamic", "theme builder" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-post-excerpt"
+}

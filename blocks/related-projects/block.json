@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/related-projects",
+	"title": "Related Projects",
+	"category": "unysonplus",
+	"icon": "screenoptions",
+	"description": "Other projects related to this one.",
+	"keywords": [ "related", "projects", "portfolio", "more work" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-related-projects"
+}

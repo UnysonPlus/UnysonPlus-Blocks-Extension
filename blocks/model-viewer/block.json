@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/model-viewer",
+	"title": "3D Model",
+	"category": "unysonplus",
+	"icon": "images-alt",
+	"description": "An interactive 3D model (glTF / GLB) with camera controls and AR.",
+	"keywords": [ "3d", "model", "gltf", "glb", "ar", "product viewer" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-model-viewer"
+}

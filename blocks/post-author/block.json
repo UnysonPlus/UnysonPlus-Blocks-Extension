@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/post-author",
+	"title": "Post Author",
+	"category": "unysonplus",
+	"icon": "admin-users",
+	"description": "The current post's author, with an optional avatar.",
+	"keywords": [ "author", "byline", "dynamic", "theme builder" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-post-author"
+}

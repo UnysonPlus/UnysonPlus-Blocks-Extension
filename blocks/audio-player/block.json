@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/audio-player",
+	"title": "Audio Player",
+	"category": "unysonplus",
+	"icon": "format-audio",
+	"description": "A playlist-capable audio player with volume and download controls.",
+	"keywords": [ "audio", "player", "music", "podcast", "playlist", "mp3" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-audio-player"
+}

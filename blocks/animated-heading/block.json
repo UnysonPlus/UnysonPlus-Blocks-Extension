@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/animated-heading",
+	"title": "Animated Heading",
+	"category": "unysonplus",
+	"icon": "editor-textcolor",
+	"description": "A heading whose last words rotate through a list — typewriter, slide, flip and more.",
+	"keywords": [ "heading", "typewriter", "rotating", "typed", "headline", "animated text" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-animated-heading"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/author-box",
+	"title": "Author Box",
+	"category": "unysonplus",
+	"icon": "admin-users",
+	"description": "An author card - avatar, bio and social links, from a user or typed in.",
+	"keywords": [ "author", "byline", "bio", "writer", "profile", "about the author" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-author-box"
+}

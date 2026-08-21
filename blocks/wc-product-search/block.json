@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/wc-product-search",
+	"title": "Product Search",
+	"category": "unysonplus",
+	"icon": "search",
+	"description": "A search field scoped to products.",
+	"keywords": [ "search", "products", "woocommerce", "find", "shop search" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-wc-product-search"
+}

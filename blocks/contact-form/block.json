@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/contact-form",
+	"title": "Contact Form",
+	"category": "unysonplus",
+	"icon": "email",
+	"description": "A contact form with your own fields, validation and email delivery.",
+	"keywords": [ "contact", "form", "email", "enquiry", "fields", "submit" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-contact-form"
+}

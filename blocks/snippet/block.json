@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/snippet",
+	"title": "Snippet",
+	"category": "unysonplus",
+	"icon": "shortcode",
+	"description": "Output a saved PHP / HTML snippet by name.",
+	"keywords": [ "snippet", "shortcode", "include", "php", "custom code" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-snippet"
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/portfolio",
+	"title": "Portfolio Grid",
+	"category": "unysonplus",
+	"icon": "portfolio",
+	"description": "A filterable grid of portfolio projects.",
+	"keywords": [ "portfolio", "projects", "grid", "work", "case studies", "gallery" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-portfolio"
+}

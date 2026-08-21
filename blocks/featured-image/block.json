@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/featured-image",
+	"title": "Featured Image",
+	"category": "unysonplus",
+	"icon": "format-image",
+	"description": "The current post's featured image, with a size and style treatment.",
+	"keywords": [ "featured image", "thumbnail", "post image", "hero" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-featured-image"
+}

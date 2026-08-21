@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/progress",
+	"title": "Progress",
+	"category": "unysonplus",
+	"icon": "chart-bar",
+	"description": "Progress bars or circles for skills, capacity and completion.",
+	"keywords": [ "progress", "bar", "skills", "meter", "percentage", "chart" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-progress"
+}

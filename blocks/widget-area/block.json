@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "unysonplus/widget-area",
+	"title": "Widget Area",
+	"category": "unysonplus",
+	"icon": "screenoptions",
+	"description": "A registered sidebar, rendered inline.",
+	"keywords": [ "widget", "sidebar", "widget area" ],
+	"textdomain": "fw",
+	"attributes": {
+		"upOptions": {
+			"type": "object",
+			"default": {}
+		}
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"spacing": { "margin": true, "padding": true },
+		"html": false
+	},
+	"editorScript": "fw-block-widget-area"
+}
