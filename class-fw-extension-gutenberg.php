@@ -846,6 +846,8 @@ class FW_Extension_Gutenberg extends FW_Extension {
 		);
 
 		/**
+		 * Filters the registered Gutenberg block definitions keyed by directory name.
+		 *
 		 * Filter the block definitions.
 		 *
 		 * @param array $blocks Block definitions keyed by directory name.
