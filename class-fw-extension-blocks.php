@@ -3,7 +3,7 @@
 }
 
 /**
- * Unyson+ Gutenberg blocks.
+ * Unyson+ blocks.
  *
  * ## The bridge, in one paragraph
  *
@@ -22,7 +22,7 @@
  * whatever it recognises. The schema stays the single source of truth, exactly
  * as it is for the PHP renderer.
  */
-class FW_Extension_Gutenberg extends FW_Extension {
+class FW_Extension_Blocks extends FW_Extension {
 
 	/**
 	 * Registered block definitions, keyed by block directory name.
@@ -846,13 +846,13 @@ class FW_Extension_Gutenberg extends FW_Extension {
 		);
 
 		/**
-		 * Filters the registered Gutenberg block definitions keyed by directory name.
+		 * Filters the registered block definitions keyed by directory name.
 		 *
 		 * Filter the block definitions.
 		 *
 		 * @param array $blocks Block definitions keyed by directory name.
 		 */
-		$this->blocks = apply_filters( 'fw_ext_gutenberg_blocks', $this->blocks );
+		$this->blocks = apply_filters( 'fw_ext_blocks_definitions', $this->blocks );
 
 		return $this->blocks;
 	}

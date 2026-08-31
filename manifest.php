@@ -4,20 +4,20 @@
 
 $manifest = [];
 
-$manifest['name']        = __( 'Gutenberg Blocks', 'fw' );
-$manifest['slug']        = 'unysonplus-gutenberg';
+$manifest['name']        = __( 'Blocks', 'fw' );
+$manifest['slug']        = 'unysonplus-blocks';
 $manifest['description'] = __(
-	'Exposes Unyson+ elements as native Gutenberg blocks, for people who prefer the block editor but still want the Unyson+ options framework. Blocks are server-rendered by the same code as the page builder, so the front-end output is identical.',
+	'Exposes Unyson+ elements as native blocks in the WordPress block editor, for people who prefer it but still want the Unyson+ options framework. Blocks are server-rendered by the same code as the page builder, so the front-end output is identical.',
 	'fw'
 );
 
-$manifest['version']     = '1.0.35';
+$manifest['version']     = '1.0.36';
 $manifest['display']     = true;
 $manifest['standalone']  = true;
 
 // Repository Info
-$manifest['github_update'] = 'UnysonPlus/UnysonPlus-Gutenberg-Extension';
-$manifest['github_repo']   = 'https://github.com/UnysonPlus/UnysonPlus-Gutenberg-Extension';
+$manifest['github_update'] = 'UnysonPlus/UnysonPlus-Blocks-Extension';
+$manifest['github_repo']   = 'https://github.com/UnysonPlus/UnysonPlus-Blocks-Extension';
 $manifest['github_branch'] = 'master';
 
 // Author Info
