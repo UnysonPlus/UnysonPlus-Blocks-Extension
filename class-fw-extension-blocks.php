@@ -42,6 +42,31 @@ class FW_Extension_Blocks extends FW_Extension {
 	}
 
 	/**
+	 * Shortcode tag => block name, for code that has to translate between the two
+	 * authoring surfaces — currently the page builder's block-markup exporter.
+	 *
+	 * Public because the mapping is the ONLY thing an exporter needs, and reading it
+	 * beats every caller re-deriving `unysonplus/<dir>` from a tag (the two are not
+	 * always a simple dash/underscore swap, and a block can be dropped without its
+	 * shortcode going away). A tag absent from this map has no block — the caller is
+	 * expected to fall back rather than guess a name.
+	 *
+	 * @return array<string,string>
+	 */
+	public function get_shortcode_block_map() {
+		$map = array();
+
+		foreach ( $this->get_blocks() as $dir => $definition ) {
+			if ( ! is_array( $definition ) || empty( $definition['shortcode'] ) ) {
+				continue;
+			}
+			$map[ (string) $definition['shortcode'] ] = 'unysonplus/' . $dir;
+		}
+
+		return $map;
+	}
+
+	/**
 	 * Block definitions.
 	 *
 	 * `shortcode` is the tag the block delegates its render to. `options` maps an
@@ -3299,6 +3324,22 @@ class FW_Extension_Blocks extends FW_Extension {
 	 * @internal
 	 */
 	public function _action_editor_assets() {
+		/**
+		 * Container blocks default to `align: full` in the editor, so the canvas shows them
+		 * as the full-bleed bands they are on the front end instead of boxing them into the
+		 * content column. Editor-only on purpose: driving the inner width with
+		 * `supports.layout` was measured to clamp `fw-container-fluid` down to theme.json's
+		 * contentSize on the FRONT END, which inverted the Full Width option. See the header
+		 * of container-width.js for the measurements.
+		 */
+		wp_enqueue_script(
+			'fw-blocks-container-width',
+			$this->get_uri( '/static/js/container-width.js' ),
+			array( 'wp-hooks', 'wp-compose', 'wp-element', 'wp-blocks' ),
+			$this->manifest->get_version(),
+			true
+		);
+
 		$shortcodes = fw_ext( 'shortcodes' );
 
 		if ( ! $shortcodes ) {
